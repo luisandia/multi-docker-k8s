@@ -22,7 +22,7 @@ function App() {
           >
             Learn React
           </a> */}
-          <Link to="/" style={{marginRight: '10vw'}}> Fib Calculator kubernetes!</Link>
+          <Link to="/" style={{marginRight: '10vw'}}> Fib 2 Calculator kubernetes!</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
         <div>
