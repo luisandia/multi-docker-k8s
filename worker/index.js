@@ -16,6 +16,7 @@ const fib = (index) => {
 }
 
 sub.on('message', (channel, message) => {
+    console.log("Calculando")
     redisClient.hset('values', message, fib(parseInt(message)))
 })
 
