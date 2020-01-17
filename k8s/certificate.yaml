@@ -12,9 +12,9 @@ spec:
         - luisandia.com
         - www.luisandia.com
     acme:
-    config:
-        - http01:
-            ingressClass: nginx
-        domains:
-            - luisandia.com
-            - www.luisandia.com
+        config:
+            - http01:
+                ingressClass: nginx
+            domains:
+                - luisandia.com
+                - www.luisandia.com
