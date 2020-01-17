@@ -5,12 +5,12 @@ metadata:
 spec:
     secretName: luisandia-com
     issuerRef:
-    name: letsencrypt-prod
-    kind: ClusterIssuer
+        name: letsencrypt-prod
+        kind: ClusterIssuer
     commonName: luisandia.com
     dnsNames:
-    - luisandia.com
-    - www.luisandia.com
+        - luisandia.com
+        - www.luisandia.com
     acme:
     config:
         - http01:
