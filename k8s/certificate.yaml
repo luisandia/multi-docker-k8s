@@ -4,7 +4,7 @@ metadata:
     name: luisandia-tls
 spec:
     secretName: luisandia-com
-    isserRef:
+    issuerRef:
         name: letsencrypt-prod
         kind: ClusterIssuer
     commonName: luisandia.com
@@ -14,7 +14,7 @@ spec:
     acme:
         config:
             - http01:
-                ingressClass:nginx
+                ingressClass: nginx
               domains:
                 - luisandia.com
                 - www.luisandia.com
