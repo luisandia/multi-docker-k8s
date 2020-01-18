@@ -1,11 +1,11 @@
 apiVersion: certmanager.k8s.io/v1alpha1
-kind: ClusterIssuer
+kind: Issuer
 metadata:
-    name: letsencrypt-prod
+  name: letsencrypt-prod
 spec:
-    acme:
-        server: https://acme-v02.api.letsencrypt.org/directory
-        email: 'luisandiamamani@gmail.com'
-        privateKeyScretRef:
-            name: letsencrypt-prod
-        http01: {}
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: luisandiamamani@gmail.com
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    http01: {}
