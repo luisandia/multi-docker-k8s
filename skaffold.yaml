@@ -35,7 +35,7 @@ deploy:
         - k8s/client-cluster-ip-service.yml
         - k8s/client-deployment.yml
         - k8s/database-persistent-volume-claim.yml
-        - k8s/ingress-service.yml
+        - ./ingress-dev-service.yml
         - k8s/postgres-cluster-ip-service.yml
         - k8s/postgres-deployment.yml
         - k8s/redis-cluster-ip-service.yml
