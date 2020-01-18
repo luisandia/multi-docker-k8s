@@ -7,7 +7,6 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: www.luisandia.com
     - http:
         paths:
           - path: /?(.*)
