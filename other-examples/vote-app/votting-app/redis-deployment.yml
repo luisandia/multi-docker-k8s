@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-app-deploy
+  labels:
+    name: redis-app-pod
+    app: demo-redis-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: redis-pod
+      app: demo-voting-app
+  template:
+    metadata:
+      name: redis-pod
+      labels:
+        name: redis-pod
+        app: demo-voting-app
+    spec:
+      containers:
+      - name: redis
+        image: redis:latest
+        ports:
+        - containerPort: 6379
+      #   volumeMounts:
+      #   - name: redis-storage
+      #     mountPath: /data/redis
+      # volumes:
+      # - name: redis-storage
+      #   emptyDir: {}

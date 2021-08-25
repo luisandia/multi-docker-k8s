@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp  # this and the template metadata should be the same
+  replicas: 3
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: myapp # this should be the same as matchLabels
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
